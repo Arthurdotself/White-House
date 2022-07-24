@@ -12,8 +12,27 @@
   <ItemGroup>
     <PackageReference Include="CouchbaseNetClient" Version="3.3.3" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.3.3" />
-    <PackageReference Include="Krypton.Toolkit" Version="65.22.6.152" />
+    <PackageReference Include="Krypton.Components.Suite" Version="4.5.9" />
+    <PackageReference Include="Krypton.Ribbon.Nightly" Version="70.22.7.203-alpha" />
     <PackageReference Include="sautinsoft.document" Version="5.5.4.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

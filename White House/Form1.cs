@@ -1,6 +1,7 @@
+using ComponentFactory.Krypton.Toolkit;
 namespace White_House
 {
-    public partial class Form1 : Form
+    public partial class Form1 : KryptonForm
     {
         public Form1()
         {
@@ -9,7 +10,7 @@ namespace White_House
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(100,0,0,0);
+          
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -45,6 +46,24 @@ namespace White_House
             Form4 form = new Form4();
             form.ShowDialog();
             this.Hide();
+        }
+
+        private void kryptonPalette1_PalettePaint(object sender, Krypton.Toolkit.PaletteLayoutEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+          //  Form5 form = new Form5();
+           // form.ShowDialog();
+           // this.Hide();
+
         }
     }
 }

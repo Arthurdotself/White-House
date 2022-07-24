@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SautinSoft.Document;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace White_House
 {
-    public partial class Form3 : Form
+    public partial class Form3 : KryptonForm
     {
         public Form3()
         {
@@ -21,7 +22,7 @@ namespace White_House
         public void getNum()
         {
 
-            textBox11.Text = (Properties.Settings.Default.numberOfContract).ToString();
+            label17.Text = (Properties.Settings.Default.numberOfContract).ToString();
 
         }
         public void saveNum()
@@ -52,20 +53,20 @@ namespace White_House
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string sellname = textBox1.Text;
-            string buyname = textBox2.Text;
-            string type = textBox3.Text;
-            string area = textBox4.Text;
-            string nebarhood = textBox5.Text;
-            string nummolak = textBox6.Text;
-            string price =  textBox7.Text;
-            string tamenat = textBox8.Text;
-            string payBeforDay = textBox9.Text;
-            string activetime = listBox1.Text;
-            string startfrom = textBox10.Text;
-            string reantpayfor = comboBox2.Text;
-            string mobile1 = textBox12.Text;
-            string mobile2 = textBox13.Text;
+            string sellname = kryptonTextBox7.Text;
+            string buyname = kryptonTextBox8.Text;
+            string type = kryptonTextBox9.Text;
+            string area = kryptonTextBox10.Text;
+            string nebarhood = kryptonTextBox1.Text;
+            string nummolak = kryptonTextBox2.Text;
+            string price =  kryptonTextBox3.Text;
+            string tamenat = kryptonTextBox4.Text;
+            string payBeforDay = kryptonTextBox6.Text;
+            string activetime = kryptonListBox1.Text;
+            string startfrom = kryptonTextBox5.Text;
+            string reantpayfor = guna2ComboBox1.Text;
+            string mobile1 = kryptonTextBox11.Text;
+            string mobile2 = kryptonTextBox12.Text;
             DateTime now = DateTime.Now;
             getNum();
 
@@ -138,7 +139,7 @@ namespace White_House
 
             foreach (ContentRange item in dc.Content.Find(@"name3").Reverse())
             {
-                item.Replace(listBox2.Text);
+                item.Replace(guna2ComboBox2.Text);
             }
 
             foreach (ContentRange item in dc.Content.Find(@"data").Reverse())
@@ -148,7 +149,7 @@ namespace White_House
 
             foreach (ContentRange item in dc.Content.Find(@"num").Reverse())
             {
-                item.Replace(textBox11.Text);
+                item.Replace(label17.Text);
             }
 
             foreach (ContentRange item in dc.Content.Find(@"num01").Reverse())

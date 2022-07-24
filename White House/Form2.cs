@@ -12,11 +12,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using ComponentFactory.Krypton.Toolkit;
 
 
 namespace White_House
 {
-    public partial class Form2 : Form
+    public partial class Form2 : KryptonForm
     {
         public object Int { get; private set; }
 
@@ -46,16 +47,16 @@ namespace White_House
             DateTime now = DateTime.Now;
 
             string sellname = textBox1.Text;
-            string buyname = textBox2.Text;
-            string type = textBox3.Text;
-            string area = textBox4.Text;
-            string nummolak = textBox5.Text;
-            string price = "$" +textBox6.Text;
-            string date = textBox7.Text;
+            string buyname = kryptonTextBox1.Text;
+            string type = kryptonTextBox2.Text;
+            string area = kryptonTextBox5.Text;
+            string nummolak = kryptonTextBox6.Text;
+            string price = "$" + kryptonTextBox9.Text;
+            string date = kryptonTextBox8.Text;
           //  string ballForseller = textBox8.Text;
-            string ballForboth = "$" +textBox9.Text ;
-            string nebarhood = textBox10.Text;
-            string loyar = textBox11.Text;
+            string ballForboth = "$" + kryptonTextBox3.Text ;
+            string nebarhood = kryptonTextBox7.Text;
+            string loyar = kryptonTextBox4.Text;
             string Path = @"C:\Users\Arthur\Desktop\whiteHouse\New\sell.docx";
 
             DocumentCore dc = DocumentCore.Load(Path);
@@ -119,7 +120,7 @@ namespace White_House
 
             foreach (ContentRange item in dc.Content.Find(@"name4").Reverse())
             {
-                item.Replace(listBox1.Text);
+                item.Replace(guna2ComboBox1.Text);
             }
 
             foreach (ContentRange item in dc.Content.Find(@"data").Reverse())
@@ -166,5 +167,17 @@ namespace White_House
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

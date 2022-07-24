@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SautinSoft.Document;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace White_House
 {
-    public partial class Form4 : Form
+    public partial class Form4 : KryptonForm
     {
         public Form4()
         {
@@ -20,10 +21,10 @@ namespace White_House
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string name1 = textBox1.Text;
-            string name2 = textBox2.Text;
-            string therd = textBox3.Text;
-            string forth = textBox4.Text;
+            string name1 = kryptonTextBox1.Text;
+            string name2 = kryptonTextBox2.Text;
+            string therd = kryptonTextBox3.Text;
+            string forth = kryptonTextBox4.Text;
             DateTime Now  = DateTime.Now;
 
             string Path = @"C:\Users\Arthur\Desktop\whiteHouse\New\pay.docx";
@@ -70,6 +71,11 @@ namespace White_House
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
